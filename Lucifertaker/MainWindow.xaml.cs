@@ -77,14 +77,14 @@ namespace Lucifertaker
             {
                 Icon = System.Drawing.Icon.FromHandle(frames[0].GetHicon()),
                 Visible = true,
-                Text = "루시퍼쨔응",
+                Text = "루시퍼",
                 ContextMenu = menu,
 
             };
             var item = new System.Windows.Forms.MenuItem
             {
                 Index = 0,
-                Text = "잘가 루시퍼쨔응",
+                Text = "ㅂㅂ",
             };
             item.Click += (object o, EventArgs e) =>
             {

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Lucifertaker"
         mc:Ignorable="d"
-        Title="루시퍼쨔응" Height="100" Width="100"
+        Title="루시퍼" Height="100" Width="100"
 		WindowStyle="None"
 		AllowsTransparency="True"
 		Background="Transparent"
