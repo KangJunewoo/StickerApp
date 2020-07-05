@@ -8,6 +8,7 @@
         Title="루시퍼쨔응" Height="100" Width="100"
 		WindowStyle="None"
 		AllowsTransparency="True"
+		Background="Transparent"
 		ShowInTaskbar="False"
 		>
     <Grid>
