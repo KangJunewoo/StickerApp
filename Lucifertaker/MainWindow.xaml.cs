@@ -68,12 +68,43 @@ namespace Lucifertaker
             timer.Interval = TimeSpan.FromSeconds(0.0167*3);
             timer.Tick += NextFrame;
             timer.Start();
+
+            MouseDown += MainWindow_MouseDown;
+
+            // for notify icon
+            var menu = new System.Windows.Forms.ContextMenu();
+            var noti = new System.Windows.Forms.NotifyIcon
+            {
+                Icon = System.Drawing.Icon.FromHandle(frames[0].GetHicon()),
+                Visible = true,
+                Text = "루시퍼쨔응",
+                ContextMenu = menu,
+
+            };
+            var item = new System.Windows.Forms.MenuItem
+            {
+                Index = 0,
+                Text = "잘가 루시퍼쨔응",
+            };
+            item.Click += (object o, EventArgs e) =>
+            {
+                Application.Current.Shutdown();
+            };
+
+            menu.MenuItems.Add(item);
+            noti.ContextMenu = menu;
+
         }
 
         private void NextFrame(object sender, EventArgs e)
         {
             frame = (frame + 1) % 12;
             iLucifer.Source = imgFrame[frame];
+        }
+
+        private void MainWindow_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ChangedButton == MouseButton.Left) this.DragMove();
         }
     }
 }
